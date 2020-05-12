@@ -34,14 +34,12 @@ bucket:
 build:
 	GOOS=linux GOARCH=amd64 go build -v -o ./build/handler ./cmd/handler
 	GOOS=linux GOARCH=amd64 go build -v -o ./build/processor ./cmd/processor
-	GOOS=linux GOARCH=amd64 go build -v -o ./build/saver ./cmd/saver
 	GOOS=linux GOARCH=amd64 go build -v -o ./build/metrics ./cmd/metrics
 	GOOS=linux GOARCH=amd64 go build -v -o ./build/callback ./cmd/callback
 
 zip:
 	@cd ./build && zip handler.zip handler
 	@cd ./build && zip processor.zip processor
-	@cd ./build && zip saver.zip saver
 	@cd ./build && zip metrics.zip metrics
 	@cd ./build && zip callback.zip callback
 
